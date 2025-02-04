@@ -1,0 +1,778 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+
+/* ===================================== Import Less ================================== */
+@import 'variable';
+/* ===================================== Basic CSS ================================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #444;
+}
+
+a:hover {
+    color: #444;
+}
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a:hover,
+a:focus,
+input,
+textarea {
+    text-decoration: none;
+    outline: none;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.cp {
+    cursor: pointer
+}
+html,body{
+    height: 100%;
+}
+p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+
+}
+.hid{
+    display: none;
+}
+.top-mar{
+    margin-top: 15px;
+}
+.h-100{
+    height: 100%;;
+}
+::placeholder {
+    color: #747f8a !important;
+    font-size: 13px;
+    opacity: .5 !important;
+}
+.container-fluid{
+    padding: 0px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $mouse-500;
+}
+strong{
+	font-family: $mouse-500;
+}
+body{
+    background-color:#f7f7ff !important;
+    font-family: $mouse-300;
+   color: #6A6A6A;
+
+}
+
+.session-title{
+	padding: 30px;
+	margin: 0px;
+	h2{
+		width: 100%;
+		text-align: center;
+
+	}
+	p{
+		max-width: 850px;
+		text-align: center;
+		float: none;
+		margin: auto;
+	}
+	span{
+		float: right;
+		font-style: italic;
+	}
+}
+.inner-title{
+	padding: 20px;
+	padding-left: 0px;
+    margin-bottom: 30px;
+	h2{
+		width: 100%;
+		text-align: center;
+		font-size: 2rem;
+		font-family: $slab;
+	}
+	p{
+		width: 100%;
+		text-align: center;
+	}
+}
+.page-nav{
+    padding: 40px;text-align: center;
+    padding-top: 160px;
+    ul{float: none;margin: auto;}
+    
+     @media screen and (max-width: 576px){
+         padding-top: 186px;
+    }
+    @media screen and (max-width: 356px){
+         padding-top: 206px;
+    }
+    h2{
+        font-size: 36px;
+        width: 100%;
+        color: #444;
+        @media screen and (max-width: 600px){
+            font-size: 26px;
+        }
+    }
+    ul li{
+        float: left;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        i{
+            width: 30px;
+            text-align: center;
+            color: #444;
+           
+        }
+        a{
+            color: #444;
+        }
+    }
+}
+.btn-success{
+	background-color: #223d50;
+	border-color: #223d50;
+	&:hover{
+		background-color: #223d50 !important;
+		border-color: #223d50 !important;
+	}
+	&:active{
+		background-color: #223d50 !important;
+		border-color: #223d50 !important;
+	}
+	&:focus{
+		background-color: #223d50 !important;
+		border-color: #223d50 !important;
+		box-shadow: none !important;
+	}
+}
+.btn-info{
+	background-color: #4f6dcd;
+	border-color: #4f6dcd;
+	&:hover{
+		background-color: #4f6dcd !important;
+		border-color: #4f6dcd !important;
+	}
+	&:active{
+		background-color: #4f6dcd !important;
+		border-color: #4f6dcd !important;
+	}
+	&:focus{
+		background-color: #4f6dcd !important;
+		border-color: #4f6dcd !important;
+		box-shadow: none !important;
+	}
+}
+.btn{
+	@include card-1();
+}
+.form-control{
+	&:focus{
+		box-shadow: none !important;
+		border:2px solid  #863dd9;
+	}
+
+}
+.btn-light{
+	background-color: #FFF;
+	color: #3F3F3F;
+}
+
+.collapse.show {
+
+    display: block !important;
+
+}
+
+.form-control:focus{
+	box-shadow: none;
+	border: 2px solid #863dd9 !important;
+}
+.form-control{
+	background-color: #F8F8F8;
+	margin-bottom: 20px;
+	&:focus{
+		background-color: #FFF;
+		border-color: #CCC;
+	}
+}
+.container{
+    max-width: 1100px;
+    @media screen and (max-width: 575px){
+        padding: 10px 15px;
+    }
+}
+/* ===================================== Body CSS ================================== */
+
+/* ===================================== Header CSS ================================== */
+
+header{
+    @include shado-1();
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    .header-top{
+        background-color: #223d50;
+        .left-item{
+            ul{
+                li{
+                    float: left;
+                    color: #FFF;
+                    padding: 10px;
+                    font-size: .8rem;
+                }
+            }
+        }
+        .right-item{
+            ul{
+                float: right;
+                li{
+                    float: left;
+                    color: #FFF;
+                    padding: 10px;
+                    font-size: .8rem;
+                }
+            }
+        }
+        
+    }
+    background-color: #FFF;
+    .header-nav{
+        .nav-item{
+            z-index: 999;
+            ul{
+                li{
+                    float: left;
+                    font-family: $mouse-500;
+                    font-size: 15px;
+                    padding: 30px;
+                    @media screen and (max-width: 953px){
+                        padding: 30px 20px;
+                    }
+                    @media screen and (max-width: 916px){
+                        padding: 30px 15px;
+                    }
+                    @media screen and (max-width: 767px){
+                        float: none;
+                        padding: 14px;
+                        border-top: 1px solid #CCC;
+                    }
+                }
+            }
+        }
+        .nav-img{
+            img{
+                width: 200px;
+                padding: 3px;
+                margin-top: 8px;
+            }
+        }
+    }
+    .scroll-to-fixed-fixed{
+        background-color: #FFF;
+        @include shado-1();
+    }
+}
+
+.small-menu{
+    float: right;
+    color: #99cc43;
+    font-size: 32px;
+    margin-top: 23px;
+    margin-right: 12px;
+    
+}
+
+
+/* ===================================== Slider Style CSS ================================== */
+
+.slider { position: relative;  padding-top: 122px;
+    @media screen and (max-width: 767px){
+        padding-top: 71px;
+    }
+     @media screen and (max-width:450px){
+        padding-top: 190px;
+    }
+}
+.slider-captions { position: absolute; bottom: 160px; text-align: center;
+ @media screen and (max-width: 1050px){
+        bottom: 100px !important;
+        .slider-title{
+            font-size: 42px;
+        }
+    }
+    @media screen and (max-width: 810px){
+        bottom: 50px !important;
+        .slider-title{
+            font-size: 32px;
+        }
+    }
+    @media screen and (max-width: 572px){
+        display: none;
+    }
+
+}
+.slider-title { font-size: 66px;  color: #fff; letter-spacing: -3px; font-family: $mouse-300;}
+.slider-text {margin-bottom: 20px; color: #fff; }
+.slider-img {background: -moz-linear-gradient(top, rgba(45, 32, 44, 0.5) 0%, rgba(45, 32, 44, 0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(45, 32, 44, 0.5) 0%, rgba(45, 32, 44, 0.5) 100%);
+    background: linear-gradient(to bottom, rgba(45, 32, 44, 0.5) 0%, rgba(45, 32, 44, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1b2429', endColorstr='#cc1b2429', GradientType=0);
+    position: relative;}
+.slider-img img{position: relative;z-index: -1;}
+.slider .owl-nav {  }
+.slider .owl-nav .owl-prev,.slider .owl-nav .owl-next { color: #fff; display: inline-block; zoom: 1; margin: 5px;
+ padding: 6px 12px; font-size: 22px; -webkit-border-radius: 23px; -moz-border-radius: 23px; border-radius: 23px;
+ background: transparent; filter: Alpha(Opacity=50); line-height: 1; border: 2px solid #fff; }
+.owl-controls.clickable .owl-buttons div:hover { filter: Alpha(Opacity=100); opacity: 1; text-decoration: none;
+ background-color: #fff; }
+.slider .owl-nav .owl-prev { position: absolute; top: 40%; left: 15px;}
+.slider .owl-nav .owl-next { position: absolute; top: 40%; right: 15px; }
+.slider .owl-dots .owl-dot { position: relative; text-align: center; bottom: 40px; max-width: 1140px; margin: 0 auto;     left: -75px; }
+.slider .owl-dots .owl-dot { }
+.slider .owl-dots .owl-dot span { display: block; width: 14px; height: 14px; margin: 0px 0px 10px 10px;
+ filter: Alpha(Opacity=50);    /*IE7 fix*/ opacity: 0.8; -webkit-border-radius: 20px; -moz-border-radius: 20px;
+  border-radius: 20px; border: 2px solid #fff; float: left; }
+.slider .owl-dots .owl-dot.active span { background-color: #fff; }
+.slider .owl-dots .owl-dot.active span, .slider .owl-controls.clickable .owl-page:hover span 
+{ background-color: #fff; filter: Alpha(Opacity=100);    /*IE7 fix*/ opacity: 1; }
+.slider{
+    .col-lg-offset-2{
+        float: none;
+        margin: auto;
+    }
+}
+
+/* ===================================== Key Features Style CSS ================================== */
+
+.key-features{
+    margin-top: -39px;
+    position: absolute;
+    @media screen and (max-width: 838px){
+        position: relative;
+        z-index: 99;
+    }
+    width: 100%;
+    z-index: 999;
+    .key-row{
+        width: 100%;
+        display: flex;
+        @include shado-1();
+        @media screen and (max-width: 486px){
+            display: block;
+        }
+        .box{
+            flex-grow: 1;
+            text-align: center;
+            padding: 60px 15px;
+            color: #FFF;
+            i{
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+        }
+        .c1{
+            background-color: #5cd399;
+        }
+        .c2{
+            background-color: #43cb89;
+        }
+    }
+}
+
+/* ===================================== Popular Cources Style CSS ================================== */
+
+.popular-cources{
+    @include big-padding();
+    margin-top: 115px;
+    @media screen and (max-width: 838px){
+        margin-top: 0px;
+    }
+    .courc-card{
+        background-color: #FFF;
+        @include card-1();
+        img{
+                width: 100%;
+        }
+        margin-bottom: 15px;
+        .cource-det{
+            padding: 15px;
+            
+            
+            h6{
+                padding-bottom: 8px;
+                border-bottom: 1px solid #CCC;
+            }
+            ul{
+                li{
+                    font-size: .85rem;
+                    padding: 5px;
+                    i{
+                        margin-right: 5px;
+                    }
+                    span{
+                        float: right;
+                        font-size: .8rem;
+                        color: #43cb89;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ===================================== Our Instructers Style CSS ================================== */
+
+.our-instructor{
+    @include big-padding();
+    background-color: #FFF;
+   
+    .instruct-row{
+        margin-top: 30px;
+        .instruct-card{
+            background-color: #f4f4f4;
+            padding: 15px;
+              margin-bottom: 15px;
+            text-align: center;
+           
+            img{
+                max-width: 120px;
+                border-radius: 50%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            h6{
+                margin-bottom: 0px;
+            }
+            p{
+                font-size: .83rem;
+            }
+            ul{
+                margin-top: 20px;
+                display: flex;
+                width: 100%;
+                 @include card-1();
+                li{
+                    flex-grow: 1;
+                    background-color: #43cb89;
+                    padding: 5px;
+                    text-align: center;
+                    color: #FFF;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+/* ===================================== Clinic Number Say CSS ================================== */
+
+.doctor-message{
+    background-image: url('../images/slider/slider_2.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+    .inner-lay{
+        background-color: rgba(6, 79, 90, 0.8);
+       @include big-padding();
+       
+        color: #FFF;
+        .numb{
+            text-align: center;
+            padding: 30px;
+            h3{
+                font-size: 42px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #CCC;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+}
+
+
+/* ===================================== Blog CSS ================================== */
+.vbf{
+    @media screen and (max-width: 500px){
+        padding: 0px;
+    }
+}
+.blog-card{
+    display: flex;
+    margin: auto;
+    background-color: #FFF;
+    padding: 15px 0px;
+    @include card-1();
+    margin-bottom: 20px;
+    @media screen and (max-width: 500px){
+        .col-2{
+            padding-right: 0px;
+            padding-left: 7px;
+        }
+    }
+    .date-box{
+        border: 1px solid #43cb89;
+        padding: 10px;
+        text-align: center;
+        p{
+            font-family: $mouse-500;
+            font-size: 34px;
+            @media screen and (max-width: 500px){
+                font-size: 1rem;
+            }
+        }
+    }
+    .img-cv{
+        text-align: center;
+        margin: auto;
+        img{
+            width: 150px;
+        }
+    }
+    .setv{
+        margin: auto;
+        @media screen and (max-width: 500px){
+            h4{
+                 font-size: 1rem;   
+            }
+            ul{
+                li{
+                    font-size: .8rem
+                }
+            }
+        }
+    }
+}
+
+
+/* ===================================== Footer Cover Style  ================================== */
+
+.footer-ablove{
+    padding: 30px;
+    background-color: #00ab9f;
+    color: #FFF;
+    font-size: 1.5rem;
+    .btn{
+        float: right;
+        background-color: #FFF;
+        font-family: $mouse-500;
+    }
+}
+
+footer{
+    @include big-padding();
+    background-color: #223d50;
+    color: #FFF;
+    h2{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .about{
+        p{
+            font-size: .9em;
+            margin-bottom: 20px;
+        }
+        .foot-address{
+            display: flex;
+            .icon{
+                padding: 20px 10px;
+            }
+            .addet{
+                font-size: .9rem;
+                margin: auto 0px;
+            }
+        }
+    }
+    .fotblog{
+        .blohjb{
+            margin-bottom: 10px;
+            p{
+                font-size: .9rem;
+            }
+            span{
+                font-size: .9rem;
+            }
+        }
+    }
+    .glink{
+        ul{
+            li{
+                padding: 10px;
+                i{
+                    margin-right: 10px;
+                }
+                a{
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .tags{
+        ul{
+            li{
+                float: left;
+                padding: 8px;
+                margin-right: 8px;
+                margin-bottom:8px;
+                border: 1px solid #CCC;
+            }
+        }
+    }
+}
+
+.copy{
+        padding: 20px;
+        background-color: #172d3c;
+        color: #FFF;
+    a{
+        color: #FFF;
+        font-size: .8rem;
+    }
+    span{
+        float: right;
+        i{
+            margin-right: 20px;
+        }
+    }
+}
+
+/* ===================================== About Us Style  ================================== */
+
+.with-medical{
+    @include big-padding();
+    background-color: #FFF;
+    .txtr{
+        padding: 10px;
+        h4{
+            font-size: 32px;
+            span{
+                color: #03509e;
+            }
+        }
+        p{
+            text-indent: 20px;
+            font-size: .9rem;
+        }
+    }
+}
+.pc2{
+    margin-top: 0px;
+    background-color: #eaeaea5e;
+}
+.bb3{
+    padding: 20px;
+}
+
+/* ===================================== Gallery Style  ================================== */
+
+.gallery-filter{
+    width: 100%;
+    text-align: center;
+    .btn{
+        background-color: #FFF;
+    }
+}
+.gallery{
+    padding: 30px;
+    background-color: #FFF;
+}
+.gallery-title
+{
+    font-size: 36px;
+    color: #29509f;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #29509f;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #29509f;
+    border-radius: 5px;
+    text-align: center;
+    color: #29509f;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #29509f;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #29509f;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #29509f;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+.ky2{
+    background-color: #FAFAFA;
+}
+
+.contact-rooo{
+    @include big-padding();
+    background-color: #FFF;
+}
