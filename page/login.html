@@ -6,9 +6,9 @@
 
   <title>Form To Google Sheets Demo</title>
   <meta name="description" content="Store HTML form submissions in Google Sheets">
-  <link href="/assets/images/school.jpg" rel="shortcut icon">
+  <link href="../assets/images/school.jpg" rel="shortcut icon">
 
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
   <script src="https://unpkg.com/prefixfree@1.0.0/prefixfree.min.js"></script>
 
   <script src="https://wzrd.in/standalone/formdata-polyfill@latest"></script>
@@ -25,10 +25,12 @@
     <form name="submit-to-google-sheet" id="signup-form">
       <input name="email" type="email" placeholder="Email" required>
       <input name="password" type="password" placeholder="password" required>
-      <input name="indexNumber" type="number" placeholder="IndexNumber">
-      <button type="submit">sign up</button>
-      <p>New register Student</p>
-      <a href="/page/login.html"> <button type="button">sign in</button></a>
+      <input name="indexNumber" type="number" placeholder="Index Number">
+      <input name="firstName" type="text" placeholder="First Name">
+      <input name="lastName" type="text" placeholder="Last Name">
+      <button type="submit">Submit</button>
+      
+
     </form>
 
     <div class="loading js-loading is-hidden">
@@ -37,20 +39,20 @@
       </div>
     </div>
 
-    
+    <p class="js-success-message is-hidden">Success!</p>
+    <p class="js-error-message is-hidden">Error!</p>
   </div>
 
   <!-- <a href="https://docs.google.com/spreadsheets/d/16vDPkBwtMNNMzgbmKfxfOEqGZhtfJha097ZKB23dZdc/edit?usp=sharing" target="_blank">View the Google Sheet</a>
   <a href="https://github.com/jamiewilson/form-to-google-sheets" target="_blank">View on GitHub</a> -->
+
   <script>
-    // Ensures the script runs only after the page loads
-    window.onload = function() {
+    window.onload = function() { 
         document.getElementById("signup-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevents default form submission
-            window.location.href = "page/home.html"; // Redirects to home.html
+            window.location.href = "home.html"; // Redirects to home.html
         });
     };
   </script>
-  
 </body>
 </html>
