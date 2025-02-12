@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> P/Ulukkappallam-MMV-School</title>
+  <meta name="description" content="Store HTML form submissions in Google Sheets">
+  <link href="../assets/images/school.jpg" rel="shortcut icon">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+ 
+<body>
+  <div class="image-container">
+    <img src="../assets/images/school.jpg" alt="School Image">
+</div>
+
+
+  <div class="form-container">
+    <form name="submit-to-google-sheet" id="signup-form">
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="password" type="password" placeholder="password" required>
+      <input name="indexNumber" type="number" placeholder="Index Number">
+      <input name="firstName" type="text" placeholder="First Name">
+      <input name="lastName" type="text" placeholder="Last Name">
+      <button type="submit">Submit</button>
+      
+
+    </form>
+
+    <div class="loading js-loading is-hidden">
+      <div class="loading-spinner">
+        <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+      </div>
+    </div>
+
+    <p class="js-success-message is-hidden">Success!</p>
+    <p class="js-error-message is-hidden">Error!</p>
+  </div>
+
+  <!-- <a href="https://docs.google.com/spreadsheets/d/16vDPkBwtMNNMzgbmKfxfOEqGZhtfJha097ZKB23dZdc/edit?usp=sharing" target="_blank">View the Google Sheet</a>
+  <a href="https://github.com/jamiewilson/form-to-google-sheets" target="_blank">View on GitHub</a> -->
+
+  <script>
+    window.onload = function() { 
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents default form submission
+            window.location.href = "home.html"; // Redirects to home.html
+        });
+    };
+  </script>
+</body>
+</html>
