@@ -38,6 +38,7 @@
           "-webkit-text-decoration-skip"
         ]
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }
